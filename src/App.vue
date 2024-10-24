@@ -7,7 +7,7 @@
     <div class="w-100 h-[10rem] bg-blue-darken-3 rounded-lg px-4 py-2 flex justify-center items-center">
       <v-btn color="teal" class="ma-2 rounded-lg px-8"> Home </v-btn>
       <v-btn color="orange-darken-2" class="ma-2 rounded-lg px-8"> Login </v-btn>
-      <v-btn color="green-darken-2" class="ma-2 rounded-lg px-8"> Perrito manzanero</v-btn>
+      <v-btn color="green-darken-2" class="ma-2 rounded-lg px-8"> Perifl </v-btn>
     </div>
   </div>
 </template>
