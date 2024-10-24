@@ -1,14 +1,40 @@
 <template>
-  <h1> Linker </h1>
+  <section class="container-login">
+    <div style="height: 1px"></div>
 
-  <div class="">
-      <v-btn outlined color="white" class="mx-2" style="background-color: transparent; border-width: 2px; border-radius: 32px;">
-        Button 1
+    <h1 class="title">Linker</h1>
+
+    <div class="btn-container">
+      <v-btn
+        outlined
+        class="mx-2"
+        style="
+          background-color: transparent;
+          border-width: 2px;
+          border-radius: 2rem;
+          border-style: solid;
+          border-color: white;
+          width: 70%;
+        "
+      >
+        Iniciar Sesión
       </v-btn>
-      <v-btn outlined color="white" class="mx-2" style="background-color: transparent; border-width: 2px; border-radius: 32px;">
-        Button 2
+      <v-btn
+        outlined
+        class="mx-2"
+        style="
+          background-color: transparent;
+          border-width: 2px;
+          border-radius: 2rem;
+          border-style: solid;
+          border-color: white;
+          width: 70%;
+        "
+      >
+        Registrarse
       </v-btn>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -20,3 +46,26 @@ onMounted(() => {
   updateTitle("Login");
 });
 </script>
+
+<style scoped>
+.title {
+  color: white;
+  display: flex;
+  padding: 0rem 1rem;
+  font-weight: 300;
+  text-align: center;
+  justify-content: center;
+}
+.container-login {
+  flex-grow: 1;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+</style>

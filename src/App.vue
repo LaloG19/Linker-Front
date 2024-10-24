@@ -1,17 +1,40 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <div class="bg-blue-darken-2 text-center rounded-xl pa-4">
-    <h2 class="py-2 text-uppercase"> Menú temporal </h2>
-    <div class="w-100 h-[10rem] bg-blue-darken-3 rounded-lg px-4 py-2 flex justify-center items-center">
-      <v-btn color="teal" class="ma-2 rounded-lg px-8"> Home </v-btn>
-      <v-btn color="orange-darken-2" class="ma-2 rounded-lg px-8"> Login </v-btn>
-      <v-btn color="green-darken-2" class="ma-2 rounded-lg px-8"> Perifl </v-btn>
-    </div>
-  </div>
+  <!-- Contenedor principal -->
+  <v-container class="main-content" fluid>
+    <router-view />
+  </v-container>
+
+  <!-- Tabs en la parte inferior -->
+  <v-bottom-navigation grow>
+    <v-btn icon @click="goTo('Home')">
+      <v-icon>mdi-home</v-icon>
+    </v-btn>
+    <v-btn icon @click="goTo('Login')">
+      <v-icon>mdi-magnify</v-icon>
+    </v-btn>
+    <v-btn icon @click="goTo('Profile')">
+      <v-icon>mdi-account</v-icon>
+    </v-btn>
+  </v-bottom-navigation>
 </template>
 
-<style scoped>
+<script setup>
+// Importamos el router
+import { useRouter } from "vue-router";
 
+const router = useRouter();
+
+// Navegación a diferentes rutas
+const goTo = (route) => {
+  router.push({ name: route });
+};
+</script>
+
+<style scoped>
+.main-content {
+  padding: 1rem;
+  background: linear-gradient(135deg, #2b0a70, #340073);
+  height: calc(100vh - 56px);
+  display: flex;
+}
 </style>
